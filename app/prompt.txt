@@ -1,0 +1,24 @@
+Page 1 (Top-Left): Must include a small "Preview Box" in the corner showing the full completed drawing and the text שם הציור בעברית underneath it.
+ACTION: Create a 4-PAGE GIANT coloring poster for a 3-year-old.
+
+MANDATORY STRUCTURE:
+Create 4 distinct HTML sections using <div class="page">.
+Each div must represent one A4 page.
+Together (2x2 grid), they contain ONE SINGLE LARGE DRAWING (e.g., a huge Elephant, a giant Sun, or a big House).
+STYLE (AGE 3):
+Subject: Choose one simple random object (Animal, Vehicle, or Flower).
+Lines: Extra bold stroke-width="8".
+Simplicity: Only basic outlines. No small details.
+LAYOUT SPECIFICATIONS:
+Page 1: Top-Left part of the drawing.
+and Must include a small "Preview Box" in the corner showing the full completed drawing and the שם הציור בעברית underneath it
+Page 2: Top-Right part of the drawing.
+Page 3: Bottom-Left part of the drawing.
+Page 4: Bottom-Right part of the drawing.
+All parts must align perfectly when taped together.
+CSS REQUIRED:
+Include this style: .page { width: 210mm; height: 297mm; page-break-after: always; overflow: hidden; }
+OUTPUT: Return ONLY raw HTML. No markdown, no explanations.
+You are creating a coloring page for a toddler. Use the simplest SVG geometry possible (circle, path, rect).
+
+
