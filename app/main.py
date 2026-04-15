@@ -6,15 +6,24 @@ from datetime import datetime
 from app.services.ai_service import AIService
 import os
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(title="מחולל חוברות עבודה")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], # בשלב הפיתוח מאפשרים הכל, בהמשך אפשר להגביל לדומיין של Landy
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 storage_service_instance = StorageService()
 
 @app.post("/generate-ai-poster")
 async def generate_ai_poster():
     # ה-Import והיצירה קורים רק כשלוחצים על הכפתור!
     try:
-        from app.services.ai_service import AIService
         service = AIService()
         file_path = await service.generate_ai_pdf()
         

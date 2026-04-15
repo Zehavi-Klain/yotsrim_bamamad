@@ -1,0 +1,28 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+venv/
+.env.*
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# FastAPI / Pydantic specific (if they generate files)
+.mypy_cache/
+.pytest_cache/
+# AWS artifacts
+AWS.zip
+
+# Python Cache
+__pycache__/
+*.pyc
+
+app/storage/
