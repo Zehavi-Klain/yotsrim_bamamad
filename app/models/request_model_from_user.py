@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from enum import Enum
 
 class AgeGroup(str, Enum):
-    YOUNG = "young"   # הערך שבאמת עובר בקוד
+    YOUNG = "young"   
     MIDDLE = "middle"
     OLDER = "older"
 
@@ -12,6 +12,6 @@ class Interest(str,Enum):
 
 class WorkbookRequest(BaseModel):
     age_group:AgeGroup
-    Interests:Interest
+    interests:Interest
 
     
